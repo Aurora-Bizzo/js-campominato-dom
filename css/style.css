@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../grass.png);
+    background-size: cover;
+}
+
+.button-container {
+    width: 100vw;
+    height: 85px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    background-image: url(../cute-flower.png);
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    cursor: url(../cursor.cur), default;
+}
+
+.clicked {
+    background-image: url(../dirt-pile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.bomb {
+    background-image: url(../bomb.png);
+}
+
+.block {
+    pointer-events: none;
+}
+
