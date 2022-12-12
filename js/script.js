@@ -65,6 +65,8 @@ function generateGameGrid(bombs_array, cellsNumber, cellsPerRow)
     grid.style.width = `${grid_side}px`;
     grid.style.height = `${grid_side}px`;
 
+    let empty = 0;
+
     for(let i = 0; i < cellsNumber; i++){
         const cell = createSingleCell(i+1, cellsPerRow);
         cell.addEventListener ('click', function(){
@@ -73,7 +75,11 @@ function generateGameGrid(bombs_array, cellsNumber, cellsPerRow)
             {
                 this.classList.add('bomb');
                 grid.classList.add('block');
-                alert('Hai perso!');
+                alert('Oh no, una bomba: Hai perso!');
+                alert('Buche scavate ='+ empty);
+            }
+            else{
+                empty++;
             }
         })
 
